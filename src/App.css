@@ -2,6 +2,41 @@
   text-align: center;
 }
 
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 94%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #4CAF50;
+}
+
+#navbar a:active {
+  background-color: #4CAF50;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
