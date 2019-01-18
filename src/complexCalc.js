@@ -1,5 +1,4 @@
 import React from "react";
-import "./weather.css";
 import math from "mathjs";
 
 function DisplayResult(props) {
