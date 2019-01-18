@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ToDoList from './toDoList';
 import Scores from "./scores";
 import Weather from "./weather";
+import ComplexCalc from "./complexCalc.js";
 import "./App.css";
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/toDoList" component={ToDoList} />
       <Route path="/scores" compoment={Scores} />
       <Route path="/weather" component={Weather} />
+      <Route path="/complexCalc" component={ComplexCalc} />
     </div>
   </Router>
   </div>
@@ -55,6 +57,9 @@ const Header = () => (
     </li>
     <li>
       <Link to="/weather">Weather</Link>
+    </li>
+    <li>
+      <Link to="/ComplexCalc">Complex Number Calculator</Link>
     </li>
   </ul>
 );

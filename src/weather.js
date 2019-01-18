@@ -15,11 +15,12 @@ function Footer() {
 
 function DisplayWeather(props) {
     const image = getImageForWeather(props.currently.icon);
+    const dateString = new Date().toString();
     return (
         <div>
             <div>
                 <br />
-                {props.place}, at {msToTime(props.currently.time)} <br />
+                {props.place}, on {dateString} <br />
                 Temperature: {fToC(props.currently.temperature)}°C ({props.currently.temperature}°F)<br />
                 Feels like: {fToC(props.currently.apparentTemperature)}°C ({props.currently.apparentTemperature}°F)<br />
                 {<img src={image}></img>}
@@ -60,18 +61,6 @@ function getImageForWeather(icon) {
 
 function fToC(f) {
     return ((f - 32) * (5 / 9)).toFixed(2);
-}
-
-function msToTime(duration) {
-    var seconds = parseInt((duration / 1000) % 60),
-        minutes = parseInt((duration / (1000 * 60)) % 60),
-        hours = parseInt((duration / (1000 * 60 * 60)) % 24);
-
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    return hours + ":" + minutes + ":" + seconds;
 }
 
 function capitalizeFirstLetter(string) {
